@@ -18,9 +18,9 @@ function Sidebar() {
 	return (
 		<div className='w-[280px] text-white p-4 bg-blue-400'>
 			<div className='h-screen'>
-				<a href="#" className='pb-4 mb-4 flex items-center border-b border-solid border-[#dee2e6] text-white'>
+				<p className='pb-4 mb-4 flex items-center border-b border-solid border-[#dee2e6] text-white'>
 					Sidebar
-				</a>
+				</p>
 				<ul className='mb-4 text-white'>
 					<li className='mb-1'>
 						<button id='1' onClick={e => handleClickMenu(e)} className='text-white w-full inline-flex py-1 px-2 bg-transparent border-0 rounded-md items-center hover:bg-[#d2f4ea] hover:text-black'>

@@ -64,7 +64,6 @@ const MainForm = () => {
 		const file = e.target.files[0];
 		file.preview = URL.createObjectURL(file);
 		setUploadImage(file);
-		images.map(image => console.log(image));
 	};
 
 	const downloadImage = () => {

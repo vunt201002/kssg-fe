@@ -10,7 +10,7 @@ function PatientsList() {
     
     useEffect(() => {
         const getPatients = async () => {
-            const res = await axios.get(`/v1/user/getpatients/${user._id}`);
+            const res = await axios.get(`http://localhost:9000/v1/user/getpatients/${user._id}`);
             setPatients(res.data);
         };
         getPatients();

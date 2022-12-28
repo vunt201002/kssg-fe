@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import { registerUser } from '../redux/apiRequest';
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
 const CreateAccountForm = () => {
     const [toggleTab, setToggleTab] = useState(1);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -23,6 +25,10 @@ const CreateAccountForm = () => {
 
     const handleToggleTab = (index) => {
         setToggleTab(index);
+    }
+
+    const handleShowPassword = () => {
+        setShowPassword(!showPassword);
     }
 
     return (
@@ -88,6 +94,13 @@ const CreateAccountForm = () => {
                                 onChange={e => setPassword(e.target.value)}
                                 required
                             />
+                             <div className="cursor-pointer" onClick={handleShowPassword}>
+                                {showPassword ? (
+                                    <AiOutlineEye size={20} className="absolute top-1/2 right-0 transform -translate-y-1/2 mr-4"/>
+                                ) : (
+                                    <AiOutlineEyeInvisible size={20} className="absolute top-1/2 right-0 transform -translate-y-1/2 mr-4"/>
+                                )}
+                            </div>
                         </div>
                         <div className="mt-6 flex flex-col item-center">
                             <div className="mx-auto">
