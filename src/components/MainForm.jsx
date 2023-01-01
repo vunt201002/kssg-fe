@@ -8,6 +8,7 @@ import { TransformWrapper, TransformComponent } from '@pronestor/react-zoom-pan-
 import axios from 'axios';
 import { getImages } from '../redux/apiRequest';
 import { useEffect } from 'react';
+import img from "./img1.png";
 
 const MainForm = () => {
 	const [uploadImage, setUploadImage] = useState();
@@ -36,10 +37,10 @@ const MainForm = () => {
 
 	const handleClickAIButton = async() => {
 		if(uploadImage) {
-			const res = await axios.get("https://pixabay.com/api/?key=30656960-34722dab587066d7b455714ab&q=yellow+flowers&image_type=photo&pretty=true");
-			var randomKssg = Math.floor(Math.random() * res.data.hits.length)
-			var randomAIimage = res.data.hits[Math.floor(Math.random() * res.data.hits.length)].webformatURL
-			setAiImage(randomAIimage);
+			// const res = await axios.get("https://pixabay.com/api/?key=30656960-34722dab587066d7b455714ab&q=yellow+flowers&image_type=photo&pretty=true");
+			// var randomAIimage = res.data.hits[Math.floor(Math.random() * res.data.hits.length)].webformatURL
+			setAiImage(img);
+			var randomKssg = Math.floor(Math.random() * 10)
 			setKssg(randomKssg);
 			var time = new Date();
 			var currentTime = time.getDate() + "/" + (time.getMonth() + 1)
@@ -50,7 +51,7 @@ const MainForm = () => {
 
 			const newImage = {
 				name: "name",
-				url: randomAIimage,
+				url: img,
 				time: currentTime,
 				kssg: randomKssg,
 				diagnose: true

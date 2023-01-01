@@ -91,14 +91,14 @@ function LoginForm() {
                                 Đăng nhập
                             </button>
                         </div>
-                        <p className="text-center my-4">hoặc</p>
+                        {/* <p className="text-center my-4">hoặc</p>
                         <div className="mx-auto">
                             <Link to="/register">
                                 <button className="px-6 py-2 text-white bg-blue-600 rounded-full hover:scale-125 duration-300">
                                     Tạo tài khoản
                                 </button>
                             </Link>
-                        </div>
+                        </div> */}
                     </div>
                 </form>
                 ) : (
