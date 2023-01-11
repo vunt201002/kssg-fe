@@ -28,7 +28,7 @@ const MainForm = () => {
             setPatient(res.data);
         };
         getPatient();
-    }, [patient, params.id, user._id]);
+    }, [params.id, user._id]);
 	
 	const handdleClickSettingButton = () => {
 		setZoomMenu(!zoomMenu);

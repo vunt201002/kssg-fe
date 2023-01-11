@@ -14,7 +14,7 @@ function PatientsList() {
             setPatients(res.data);
         };
         getPatients();
-    }, [patients, user._id]);
+    }, [user._id]);
 
     const [currentItems, setCurrentItems] = useState([]);
 	const [pageCount, setPageCount] = useState(0);
